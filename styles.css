@@ -1,9 +1,12 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: hsl(0, 0%, 100%);
-    color: #333;
+    /* Apply pink-white gradient background */
+    background: linear-gradient(to bottom, #faaed5, #ffffff);
+    color: #000000;
+    /* Ensure the background covers the entire viewport */
+    min-height: 100vh;
 }
 
 .container {
@@ -37,24 +40,30 @@ button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    cursor: pointer; /* Fallback cursor */
+    cursor: pointer;
     background-color: #000000;
     color: #ffffff;
     border: none;
     border-radius: 4px;
     text-decoration: none;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-    background-color: #fff; /* Change background color to white */
-    color: #000000; /* Change text color to black */
-    box-shadow: 0 0 10px 5px rgba(255, 192, 203, 0.5); /* Add pink outer glow */
+    background-color: #fff;
+    color: #000000;
+    box-shadow: 0 0 10px 5px rgba(255, 192, 203, 0.5);
 }
 
 /* Apply radial-gradient cursor as a fallback */
 @supports (cursor: pointer) {
     button {
-        cursor: pointer; /* Use pointer cursor as fallback */
+        cursor: pointer;
     }
 }
+
+/* Change navigation bar color */
+nav {
+    background-color: #eb2a0c !important;
+}
+
